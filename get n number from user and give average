@@ -1,0 +1,22 @@
+import numpy as np
+
+""""
+A= np.array([[7,8,9],[10,11,12]])
+print(A)
+
+array = np.ones((2,3))
+print(array)
+""""
+
+n=int(input("kac adet sayi girilicek ?"))
+a=[]
+
+for i in range(0,n):
+    elem=int(input("sayilari giriniz :"))
+    a.append(elem)
+    avg=sum(a)/n
+    break
+    
+    print("girilen sayilarin ortalamasi :",round(avg,2))
+
+
