@@ -1,0 +1,16 @@
+import cv2 
+import matplotlib.pyplot as plt
+import numpy as np
+
+
+
+path='D:\\Python_Images\\plan.png'
+image= cv2.imread(path)
+
+im1=cv2.blur(image,(5,5))
+im2=cv2.boxFilter(image, -1, (2,2), normalize=True)
+
+cv2.imshow('image',np.hstack(im1,im2))
+cv2.waitKey(0)
+cv2.destroyAllWindows
+cv2.waitKey(1)
