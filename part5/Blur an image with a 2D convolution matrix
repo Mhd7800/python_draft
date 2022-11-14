@@ -1,0 +1,19 @@
+import cv2
+import numpy as np
+
+
+
+#path='C:/Downloads/Sali/Sali10.png'
+#path='C:/Users/hamou/Downloads/plan.png'
+path='D:\\Python_Images\\plan.png'
+image= cv2.imread(path)
+
+kernel1=np.ones((5,5), np.float32)/30
+
+img = cv2.filter2D(src=image, ddepth=-1, kernel=kernel1)
+
+cv2.imshow("Original", image)
+cv2.imshow("kernel Blur", img)
+
+cv2.waitKey()
+#cv2.destroyAllWindows
